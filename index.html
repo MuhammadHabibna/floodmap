@@ -15,12 +15,13 @@
 <body>
   <!-- HEADER NAVBAR -->
   <header id="header">
+    <div class="top-accent-bar" style="height: 4px; background: linear-gradient(90deg, #E03E3E 50%, #FFFFFF 50%); border-bottom: 1px solid var(--border);"></div>
     <div class="header-inner">
       <div class="header-brand">
         <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
         <div>
           <h1 class="header-title">Flood DSS</h1>
-          <p class="header-subtitle">DOLANAN DATA NEXUS 2026</p>
+          <p class="header-subtitle">SISTEM PENDUKUNG KEPUTUSAN PENANGANAN BENCANA — TIM DOLANAN DATA</p>
         </div>
       </div>
       <nav class="header-nav">
@@ -233,6 +234,61 @@
         <div class="chart-card"><h3>Distribusi Kelas Test (Prediksi Model)</h3><canvas id="chart-class-test"></canvas></div>
         <div class="chart-card"><h3>Distribusi Kelas Train (Ground Truth)</h3><canvas id="chart-class-train"></canvas></div>
         <div class="chart-card full-width"><h3>IoU per Kelas</h3><canvas id="chart-iou-class"></canvas></div>
+      </div>
+
+      <!-- SUBSECTION: EXPLORATORY DATA ANALYSIS -->
+      <div class="eda-section-title" style="margin-top: 40px; margin-bottom: 20px;">
+        <h3>Analisis Karakteristik Data (EDA) & Kualitas Visual</h3>
+      </div>
+      
+      <div class="eda-images-grid">
+        <div class="eda-image-card">
+          <img src="eda/distribution_pixel_pct.png" alt="Distribusi Persentase Piksel Kelas">
+          <div class="eda-image-info">
+            <h4>Distribusi Piksel Target</h4>
+            <p>Visualisasi ketimpangan kelas (long-tail) di mana kelas air sangat mendominasi dataset pelatihan.</p>
+          </div>
+        </div>
+
+        <div class="eda-image-card">
+          <img src="eda/relational_cooccurrence.png" alt="Ko-okurensi Relasional Kelas">
+          <div class="eda-image-info">
+            <h4>Ko-okurensi Spasial</h4>
+            <p>Analisis spasial interaksi antar kelas, seperti hubungan letak kendaraan terhadap jalan tergenang.</p>
+          </div>
+        </div>
+
+        <div class="eda-image-card">
+          <img src="eda/morphology_spatial_heatmaps.png" alt="Heatmap Spasial Morfologi Bencana">
+          <div class="eda-image-info">
+            <h4>Heatmap Spasial Genangan</h4>
+            <p>Kepadatan spasial sebaran bencana banjir secara geografis berdasarkan anotasi topografi.</p>
+          </div>
+        </div>
+
+        <div class="eda-image-card">
+          <img src="eda/shift_visual_distributions.png" alt="Shift Visual Distribusi Data">
+          <div class="eda-image-info">
+            <h4>Pergeseran Visual Data</h4>
+            <p>Analisis distribusi domain piksel antara set latih (train) dan set uji (test) eksternal.</p>
+          </div>
+        </div>
+
+        <div class="eda-image-card">
+          <img src="eda/quality_overlay_check_1.png" alt="Cek Kualitas Overlay Citra 1">
+          <div class="eda-image-info">
+            <h4>Kualitas Masking & Overlay A</h4>
+            <p>Verifikasi visual keselarasan batas objek segmentasi terhadap citra mentah drone.</p>
+          </div>
+        </div>
+
+        <div class="eda-image-card">
+          <img src="eda/quality_overlay_check_2.png" alt="Cek Kualitas Overlay Citra 2">
+          <div class="eda-image-info">
+            <h4>Kualitas Masking & Overlay B</h4>
+            <p>Verifikasi segmentasi pada wilayah pemukiman padat penduduk dengan genangan tinggi.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
