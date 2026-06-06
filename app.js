@@ -69,17 +69,18 @@ async function loadData() {
 function renderKPI() {
   const grid = document.getElementById('kpi-grid');
   const cards = [
-    { label: 'Total Wilayah Terpantau', value: kpiData.total_regions, icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>' },
+    { label: 'Total Wilayah Terpantau', value: kpiData.total_regions, cls: 'info', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>' },
     { label: 'Wilayah KRITIS', value: kpiData.critical_regions, cls: 'critical', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>' },
-    { label: 'Wilayah TINGGI', value: kpiData.high_regions, icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>' },
+    { label: 'Wilayah TINGGI', value: kpiData.high_regions, cls: 'warning', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>' },
     { label: 'Rata-rata Genangan', value: kpiData.avg_inundation_pct + '%', cls: 'accent', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>' },
-    { label: 'Wilayah Akses Terputus', value: kpiData.roads_cut_regions, icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>' }
+    { label: 'Wilayah Akses Terputus', value: kpiData.roads_cut_regions, cls: 'danger', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>' }
   ];
   
   grid.innerHTML = cards.map(c => `
-    <div class="kpi-card">
+    <div class="kpi-card kpi-${c.cls}">
       <div class="kpi-label">${c.icon}<span>${c.label}</span></div>
-      <div class="kpi-value ${c.cls || ''}">${c.value}</div>
+      <div class="kpi-value">${c.value}</div>
+      <div class="kpi-bg-icon">${c.icon}</div>
     </div>
   `).join('');
 }
