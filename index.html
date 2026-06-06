@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Intelijen Bencana Berbasis AI — Dolanan Data UNESA</title>
+  <meta name="description" content="Mengubah citra drone menjadi prioritas evakuasi banjir dalam hitungan detik.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+  <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER NAVBAR -->
+  <header id="header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        <div>
+          <h1 class="header-title">Flood DSS</h1>
+          <p class="header-subtitle">DOLANAN DATA NEXUS 2026</p>
+        </div>
+      </div>
+      <nav class="header-nav">
+        <a href="#insight">Business Insight</a>
+        <a href="#prototype">Peta Prioritas</a>
+        <a href="#live">Live Prediction</a>
+        <a href="#performa">Validasi Data</a>
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="hero-badge">Sistem Pendukung Keputusan (DSS)</div>
+        <h1 class="hero-title">Sistem Intelijen Bencana Berbasis AI</h1>
+        <p class="hero-desc">Mengubah data citra drone mentah menjadi peta keparahan dan prioritas evakuasi banjir dalam hitungan detik. Memberdayakan tim SAR dan pemerintah dengan data yang presisi.</p>
+      </div>
+      
+      <!-- KPI STRIP (Impact First) -->
+      <div class="kpi-grid" id="kpi-grid"></div>
+    </section>
+
+    <!-- SECTION 1: BUSINESS INSIGHT -->
+    <section id="insight" class="section">
+      <div class="section-header">
+        <h2>Business Insight & Impact</h2>
+      </div>
+      <div class="insight-container">
+        <div class="insight-text">
+          <h3>Dari Visual Menjadi Tindakan</h3>
+          <p>Pemetaan banjir tradisional memakan waktu berhari-hari. Sistem ini menggunakan model <strong>SegFormer-B4</strong> untuk mengenali 10 kelas objek (seperti <code>building-flooded</code>, <code>road-flooded</code>) secara otomatis.</p>
+          <p><strong>Bagaimana Sistem ini Bekerja?</strong></p>
+          <ol class="workflow-list">
+            <li><strong>Input Data:</strong> Drone menyisir area terdampak dan mengirimkan citra udara.</li>
+            <li><strong>AI Analysis:</strong> Model secara *real-time* memilah piksel mana yang merupakan bangunan terendam, jalan terputus, atau genangan air.</li>
+            <li><strong>FSPI Score:</strong> Sistem menghitung <em>Flood Severity Priority Index (FSPI)</em> untuk mengkuantifikasi tingkat krisis.</li>
+            <li><strong>Action:</strong> Tim di lapangan langsung mendapatkan daftar wilayah prioritas (Decision Feed) untuk pengerahan logistik & evakuasi.</li>
+          </ol>
+        </div>
+        <div class="insight-graphic">
+          <div class="workflow-card">
+            <div class="step">📸 Citra Drone</div>
+            <div class="arrow">⬇️</div>
+            <div class="step highlight">🤖 SegFormer AI Processing</div>
+            <div class="arrow">⬇️</div>
+            <div class="step">🗺️ Indeks Keparahan Wilayah</div>
+            <div class="arrow">⬇️</div>
+            <div class="step critical">🚨 Deploy Tim SAR (Prioritas Utama)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: PROTOTYPE (MAP + FEED) -->
+    <section id="prototype" class="section full-width-section">
+      <div class="section-header">
+        <h2>Simulasi Penanganan Wilayah (Purwarupa)</h2>
+        <span class="badge-sim">Data Dummy / Konteks Sumatra</span>
+      </div>
+      
+      <div class="prototype-grid">
+        <!-- Kolom Kiri: PETA -->
+        <div class="prototype-map">
+          <div class="map-controls">
+            <div class="control-group">
+              <label>Metrik Peta:</label>
+              <select id="map-layer-select">
+                <option value="fspi">Skor Prioritas (FSPI)</option>
+                <option value="inundation">Genangan (Inundation)</option>
+                <option value="infra_damage">Kerusakan Infrastruktur</option>
+                <option value="access_loss">Akses Terputus</option>
+              </select>
+            </div>
+            <div class="control-group whatif-group">
+              <label>Simulasi Bobot (What-If):</label>
+              <div class="slider-row">
+                <span class="slider-label">Genangan</span>
+                <input type="range" id="w1" min="0" max="100" value="40" class="slider">
+              </div>
+              <div class="slider-row">
+                <span class="slider-label">Infrastruktur</span>
+                <input type="range" id="w2" min="0" max="100" value="30" class="slider">
+              </div>
+              <div class="slider-row">
+                <span class="slider-label">Akses</span>
+                <input type="range" id="w3" min="0" max="100" value="30" class="slider">
+              </div>
+            </div>
+          </div>
+          
+          <div class="map-wrapper">
+            <div id="map"></div>
+            <!-- Popup Map -->
+            <div id="map-panel" class="map-panel hidden">
+              <button class="panel-close" id="panel-close">&times;</button>
+              <h3 id="panel-name"></h3>
+              <div class="panel-badge" id="panel-badge"></div>
+              <div class="panel-fspi">FSPI: <span id="panel-fspi"></span></div>
+              <div class="panel-indicators">
+                <div class="indicator-bar"><span>Genangan</span><div class="bar-track"><div class="bar-fill" id="bar-inundation"></div></div><span class="bar-val" id="val-inundation"></span></div>
+                <div class="indicator-bar"><span>Kerusakan</span><div class="bar-track"><div class="bar-fill" id="bar-infra"></div></div><span class="bar-val" id="val-infra"></span></div>
+                <div class="indicator-bar"><span>Akses</span><div class="bar-track"><div class="bar-fill" id="bar-access"></div></div><span class="bar-val" id="val-access"></span></div>
+              </div>
+              <div class="panel-tags" id="panel-tags"></div>
+              <div class="panel-rec" id="panel-rec"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: FEED KEPUTUSAN -->
+        <div class="prototype-feed">
+          <div class="feed-header">
+            <h3>Decision Feed</h3>
+            <button class="btn-export" id="btn-export">Export PDF</button>
+          </div>
+          <div class="feed-list-scroll" id="feed-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: LIVE PREDICTION -->
+    <section id="live" class="section">
+      <div class="section-header">
+        <h2>Live Prediction (Hugging Face)</h2>
+      </div>
+      <div class="hf-container">
+        <div class="hf-desc">
+          <p>Fitur prediksi ini mendemonstrasikan bagaimana sistem mengolah citra baru yang tidak pernah dilihat sebelumnya secara <strong>real-time</strong>.</p>
+          <p>Demi menjaga agar dashboard web ini tetap ringan (tanpa *backend* GPU), mesin inferensi menggunakan <strong>Gradio</strong> dan berjalan sepenuhnya di infrastruktur <strong>Hugging Face Spaces</strong>.</p>
+          <div class="download-sample-wrapper" style="margin-top: 16px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <button id="btn-download-sample" class="btn-export" style="background: var(--brand); color: #fff; border-color: var(--brand); font-weight: 600; padding: 10px 18px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" style="margin-right: 8px; display: inline-block; vertical-align: middle;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Unduh Sampel Citra Acak (Train Set)
+            </button>
+            <span id="download-msg" style="font-size: 13px; color: var(--status-rendah); font-weight: 600; min-height: 20px;"></span>
+          </div>
+        </div>
+        <div class="hf-iframe-wrapper">
+          <div class="hf-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="48" height="48"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <h3>Menunggu Integrasi Hugging Face</h3>
+            <p>Silakan <em>deploy</em> script <code>HuggingFace_Deployment/app.py</code> ke Space Anda, lalu *embed* URL-nya di komponen Iframe ini.</p>
+            <!-- 
+            Contoh Iframe:
+            <iframe src="https://hf.space/embed/username/space-name/+" frameBorder="0" width="100%" height="600px"></iframe>
+            -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: VALIDASI DATA & EDA -->
+    <section id="performa" class="section">
+      <div class="section-header">
+        <h2>Validasi Data & Performa Model</h2>
+      </div>
+      
+      <div class="eda-narrative">
+        <p>Model ini dilatih pada <strong>1.445 citra latih</strong> beresolusi 480&times;640 piksel. Analisis <em>Exploratory Data Analysis (EDA)</em> mendeteksi fenomena <strong>extreme long-tail imbalance</strong>, di mana kelas <code>water</code> mendominasi (56.4%) dibandingkan kelas langka seperti <code>tree</code> (0.18%). Oleh karena itu, pendekatan <strong>Triple Loss</strong> (CrossEntropy + Lovász-Softmax + Focal Loss) digunakan untuk memaksa model memperhatikan objek kecil (seperti <code>vehicle</code> dan rumah).</p>
+        <p class="eda-gap">Gap antara skor Val mIoU (~0.64) dan skor uji publik LB (~0.49) telah diinvestigasi: terdapat kebocoran data (<strong>Data Leakage</strong>) masif (77.8%) di mana citra set validasi hampir identik dengan set pelatihan. Menggunakan <em>Test-Time Augmentation (TTA)</em> terbukti krusial untuk menjaga ketahanan model pada data uji eksternal.</p>
+      </div>
+
+      <div class="model-metrics-row">
+        <div class="metric-card"><span class="metric-label">Best Val mIoU</span><span class="metric-value accent">0.6414</span></div>
+        <div class="metric-card"><span class="metric-label">Best Val mDice</span><span class="metric-value">0.7443</span></div>
+        <div class="metric-card"><span class="metric-label">Pixel Accuracy</span><span class="metric-value">88.75%</span></div>
+        <div class="metric-card"><span class="metric-label">Arsitektur</span><span class="metric-value small">SegFormer-B4 (64M param)</span></div>
+      </div>
+
+      <div class="charts-grid">
+        <div class="chart-card"><h3>Distribusi Kelas Test (Prediksi Model)</h3><canvas id="chart-class-test"></canvas></div>
+        <div class="chart-card"><h3>Distribusi Kelas Train (Ground Truth)</h3><canvas id="chart-class-train"></canvas></div>
+        <div class="chart-card full-width"><h3>IoU per Kelas</h3><canvas id="chart-iou-class"></canvas></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="disclaimer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span><strong>Catatan:</strong> Peta wilayah bersifat ilustratif untuk mendemonstrasikan sistem pendukung keputusan (DSS). Dataset uji asli tidak memuat koordinat geospasial aktual. Penggunaan palet warna sepenuhnya mengacu pada <code>ColorPalette-Values.xlsx</code>.</span>
+      </div>
+      <p class="credits">Tim Dolanan Data — UNESA 2026 &bull; Model: SegFormer-B4 (nvidia/mit-b4), Triple Loss, 4&times; TTA</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

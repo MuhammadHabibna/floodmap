@@ -1,0 +1,15 @@
+{
+  "total_pixels": 137318400,
+  "classes": {
+    "background": 46995559,
+    "building-flooded": 15646821,
+    "building-non-flooded": 0,
+    "grass": 544438,
+    "pool": 106086,
+    "road-flooded": 32848888,
+    "road-non-flooded": 8406281,
+    "tree": 0,
+    "vehicle": 12179945,
+    "water": 20590382
+  }
+}

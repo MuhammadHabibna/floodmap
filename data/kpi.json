@@ -1,0 +1,8 @@
+{
+  "total_regions": 16,
+  "critical_regions": 8,
+  "high_regions": 8,
+  "avg_inundation_pct": 50.3,
+  "est_buildings_flooded_px": 15646821,
+  "roads_cut_regions": 16
+}

@@ -1,0 +1,434 @@
+[
+  {
+    "region_id": "sec-01",
+    "name": "Kecamatan Sungai Liat",
+    "fspi": 49.4,
+    "status": "TINGGI",
+    "indicators": {
+      "inundation": 0.3853,
+      "infra_damage": 0.6429,
+      "access_loss": 0.4903
+    },
+    "n_images": 28,
+    "top_labels": [
+      {
+        "label": "road-flooded",
+        "count": 1766631
+      },
+      {
+        "label": "vehicle",
+        "count": 999057
+      },
+      {
+        "label": "road-non-flooded",
+        "count": 746403
+      }
+    ],
+    "recommendation": "Siaga infrastruktur. AI mendeteksi rasio tinggi pada label #road-flooded, #vehicle, #road-non-flooded. Insight: Rasio pixel `building-flooded` terhadap total bangunan sangat tinggi."
+  },
+  {
+    "region_id": "sec-02",
+    "name": "Kecamatan Muara Baru",
+    "fspi": 56.3,
+    "status": "TINGGI",
+    "indicators": {
+      "inundation": 0.4305,
+      "infra_damage": 0.7857,
+      "access_loss": 0.5178
+    },
+    "n_images": 28,
+    "top_labels": [
+      {
+        "label": "road-flooded",
+        "count": 1682380
+      },
+      {
+        "label": "vehicle",
+        "count": 1121088
+      },
+      {
+        "label": "building-flooded",
+        "count": 940418
+      }
+    ],
+    "recommendation": "Siaga infrastruktur. AI mendeteksi rasio tinggi pada label #road-flooded, #vehicle, #building-flooded. Insight: Rasio pixel `building-flooded` terhadap total bangunan sangat tinggi."
+  },
+  {
+    "region_id": "sec-03",
+    "name": "Kecamatan Tanjung Harapan",
+    "fspi": 52.0,
+    "status": "TINGGI",
+    "indicators": {
+      "inundation": 0.4368,
+      "infra_damage": 0.6071,
+      "access_loss": 0.5447
+    },
+    "n_images": 28,
+    "top_labels": [
+      {
+        "label": "road-flooded",
+        "count": 1924271
+      },
+      {
+        "label": "road-non-flooded",
+        "count": 784169
+      },
+      {
+        "label": "building-flooded",
+        "count": 780580
+      }
+    ],
+    "recommendation": "Siaga infrastruktur. AI mendeteksi rasio tinggi pada label #road-flooded, #road-non-flooded, #building-flooded. Insight: Rasio pixel `building-flooded` terhadap total bangunan sangat tinggi."
+  },
+  {
+    "region_id": "sec-04",
+    "name": "Kecamatan Rawa Indah",
+    "fspi": 69.7,
+    "status": "KRITIS",
+    "indicators": {
+      "inundation": 0.6235,
+      "infra_damage": 0.8214,
+      "access_loss": 0.6707
+    },
+    "n_images": 28,
+    "top_labels": [
+      {
+        "label": "road-flooded",
+        "count": 2703132
+      },
+      {
+        "label": "building-flooded",
+        "count": 1413633
+      },
+      {
+        "label": "road-non-flooded",
+        "count": 628035
+      }
+    ],
+    "recommendation": "Fokus evakuasi! Anomali piksel terdeteksi signifikan pada label: #road-flooded, #building-flooded, #road-non-flooded. Insight: Rasio pixel `building-flooded` terhadap total bangunan sangat tinggi. Insight: Akses terisolasi akibat sebaran pixel `road-flooded` yang mendominasi."
+  },
+  {
+    "region_id": "sec-05",
+    "name": "Kecamatan Pantai Cermin",
+    "fspi": 59.5,
+    "status": "TINGGI",
+    "indicators": {
+      "inundation": 0.5853,
+      "infra_damage": 0.5714,
+      "access_loss": 0.6304
+    },
+    "n_images": 28,
+    "top_labels": [
+      {
+        "label": "road-flooded",
+        "count": 2454611
+      },
+      {
+        "label": "building-flooded",
+        "count": 672192
+      },
+      {
+        "label": "vehicle",
+        "count": 559196
+      }
+    ],
+    "recommendation": "Siaga infrastruktur. AI mendeteksi rasio tinggi pada label #road-flooded, #building-flooded, #vehicle. Insight: Rasio pixel `building-flooded` terhadap total bangunan sangat tinggi. Insight: Akses terisolasi akibat sebaran pixel `road-flooded` yang mendominasi."
+  },
+  {
+    "region_id": "sec-06",
+    "name": "Kecamatan Bandar Setia",
+    "fspi": 60.1,
+    "status": "KRITIS",
+    "indicators": {
+      "inundation": 0.5456,
+      "infra_damage": 0.5714,
+      "access_loss": 0.703
+    },
+    "n_images": 28,
+    "top_labels": [
+      {
+        "label": "road-flooded",
+        "count": 2282230
+      },
+      {
+        "label": "building-flooded",
+        "count": 712462
+      },
+      {
+        "label": "vehicle",
+        "count": 662568
+      }
+    ],
+    "recommendation": "Fokus evakuasi! Anomali piksel terdeteksi signifikan pada label: #road-flooded, #building-flooded, #vehicle. Insight: Rasio pixel `building-flooded` terhadap total bangunan sangat tinggi. Insight: Akses terisolasi akibat sebaran pixel `road-flooded` yang mendominasi."
+  },
+  {
+    "region_id": "sec-07",
+    "name": "Kecamatan Air Tawar",
+    "fspi": 61.3,
+    "status": "KRITIS",
+    "indicators": {
+      "inundation": 0.4873,
+      "infra_damage": 0.8214,
+      "access_loss": 0.5714
+    },
+    "n_images": 28,
+    "top_labels": [
+      {
+        "label": "building-flooded",
+        "count": 1633293
+      },
+      {
+        "label": "road-flooded",
+        "count": 1267503
+      },
+      {
+        "label": "road-non-flooded",
+        "count": 604743
+      }
+    ],
+    "recommendation": "Fokus evakuasi! Anomali piksel terdeteksi signifikan pada label: #building-flooded, #road-flooded, #road-non-flooded. Insight: Rasio pixel `building-flooded` terhadap total bangunan sangat tinggi."
+  },
+  {
+    "region_id": "sec-08",
+    "name": "Kecamatan Kampung Melayu",
+    "fspi": 63.0,
+    "status": "KRITIS",
+    "indicators": {
+      "inundation": 0.5232,
+      "infra_damage": 0.7857,
+      "access_loss": 0.6158
+    },
+    "n_images": 28,
+    "top_labels": [
+      {
+        "label": "road-flooded",
+        "count": 2684055
+      },
+      {
+        "label": "building-flooded",
+        "count": 990656
+      },
+      {
+        "label": "vehicle",
+        "count": 920388
+      }
+    ],
+    "recommendation": "Fokus evakuasi! Anomali piksel terdeteksi signifikan pada label: #road-flooded, #building-flooded, #vehicle. Insight: Rasio pixel `building-flooded` terhadap total bangunan sangat tinggi. Insight: Akses terisolasi akibat sebaran pixel `road-flooded` yang mendominasi."
+  },
+  {
+    "region_id": "sec-09",
+    "name": "Kecamatan Pelabuhan Ratu",
+    "fspi": 52.7,
+    "status": "TINGGI",
+    "indicators": {
+      "inundation": 0.4336,
+      "infra_damage": 0.6429,
+      "access_loss": 0.5361
+    },
+    "n_images": 28,
+    "top_labels": [
+      {
+        "label": "road-flooded",
+        "count": 1471228
+      },
+      {
+        "label": "building-flooded",
+        "count": 1153854
+      },
+      {
+        "label": "vehicle",
+        "count": 719907
+      }
+    ],
+    "recommendation": "Siaga infrastruktur. AI mendeteksi rasio tinggi pada label #road-flooded, #building-flooded, #vehicle. Insight: Rasio pixel `building-flooded` terhadap total bangunan sangat tinggi."
+  },
+  {
+    "region_id": "sec-10",
+    "name": "Kecamatan Teluk Dalam",
+    "fspi": 66.6,
+    "status": "KRITIS",
+    "indicators": {
+      "inundation": 0.5362,
+      "infra_damage": 0.7857,
+      "access_loss": 0.7178
+    },
+    "n_images": 28,
+    "top_labels": [
+      {
+        "label": "road-flooded",
+        "count": 2263268
+      },
+      {
+        "label": "building-flooded",
+        "count": 1018545
+      },
+      {
+        "label": "vehicle",
+        "count": 771161
+      }
+    ],
+    "recommendation": "Fokus evakuasi! Anomali piksel terdeteksi signifikan pada label: #road-flooded, #building-flooded, #vehicle. Insight: Rasio pixel `building-flooded` terhadap total bangunan sangat tinggi. Insight: Akses terisolasi akibat sebaran pixel `road-flooded` yang mendominasi."
+  },
+  {
+    "region_id": "sec-11",
+    "name": "Kecamatan Sumber Jaya",
+    "fspi": 61.1,
+    "status": "KRITIS",
+    "indicators": {
+      "inundation": 0.5381,
+      "infra_damage": 0.6429,
+      "access_loss": 0.6777
+    },
+    "n_images": 28,
+    "top_labels": [
+      {
+        "label": "road-flooded",
+        "count": 2170279
+      },
+      {
+        "label": "building-flooded",
+        "count": 1427148
+      },
+      {
+        "label": "road-non-flooded",
+        "count": 907778
+      }
+    ],
+    "recommendation": "Fokus evakuasi! Anomali piksel terdeteksi signifikan pada label: #road-flooded, #building-flooded, #road-non-flooded. Insight: Rasio pixel `building-flooded` terhadap total bangunan sangat tinggi. Insight: Akses terisolasi akibat sebaran pixel `road-flooded` yang mendominasi."
+  },
+  {
+    "region_id": "sec-12",
+    "name": "Kecamatan Padang Bulan",
+    "fspi": 75.1,
+    "status": "KRITIS",
+    "indicators": {
+      "inundation": 0.6507,
+      "infra_damage": 0.7857,
+      "access_loss": 0.8508
+    },
+    "n_images": 28,
+    "top_labels": [
+      {
+        "label": "road-flooded",
+        "count": 2997552
+      },
+      {
+        "label": "building-flooded",
+        "count": 1212428
+      },
+      {
+        "label": "road-non-flooded",
+        "count": 636533
+      }
+    ],
+    "recommendation": "Fokus evakuasi! Anomali piksel terdeteksi signifikan pada label: #road-flooded, #building-flooded, #road-non-flooded. Insight: Rasio pixel `building-flooded` terhadap total bangunan sangat tinggi. Insight: Akses terisolasi akibat sebaran pixel `road-flooded` yang mendominasi."
+  },
+  {
+    "region_id": "sec-13",
+    "name": "Kecamatan Tegal Sari",
+    "fspi": 56.0,
+    "status": "TINGGI",
+    "indicators": {
+      "inundation": 0.4591,
+      "infra_damage": 0.7143,
+      "access_loss": 0.539
+    },
+    "n_images": 28,
+    "top_labels": [
+      {
+        "label": "road-flooded",
+        "count": 1867778
+      },
+      {
+        "label": "vehicle",
+        "count": 923313
+      },
+      {
+        "label": "road-non-flooded",
+        "count": 742602
+      }
+    ],
+    "recommendation": "Siaga infrastruktur. AI mendeteksi rasio tinggi pada label #road-flooded, #vehicle, #road-non-flooded. Insight: Rasio pixel `building-flooded` terhadap total bangunan sangat tinggi."
+  },
+  {
+    "region_id": "sec-14",
+    "name": "Kecamatan Cempaka Putih",
+    "fspi": 62.0,
+    "status": "KRITIS",
+    "indicators": {
+      "inundation": 0.5279,
+      "infra_damage": 0.75,
+      "access_loss": 0.6133
+    },
+    "n_images": 28,
+    "top_labels": [
+      {
+        "label": "road-flooded",
+        "count": 2249334
+      },
+      {
+        "label": "building-flooded",
+        "count": 1402312
+      },
+      {
+        "label": "vehicle",
+        "count": 791135
+      }
+    ],
+    "recommendation": "Fokus evakuasi! Anomali piksel terdeteksi signifikan pada label: #road-flooded, #building-flooded, #vehicle. Insight: Rasio pixel `building-flooded` terhadap total bangunan sangat tinggi. Insight: Akses terisolasi akibat sebaran pixel `road-flooded` yang mendominasi."
+  },
+  {
+    "region_id": "sec-15",
+    "name": "Kecamatan Karang Anyar",
+    "fspi": 53.7,
+    "status": "TINGGI",
+    "indicators": {
+      "inundation": 0.4195,
+      "infra_damage": 0.8214,
+      "access_loss": 0.4088
+    },
+    "n_images": 28,
+    "top_labels": [
+      {
+        "label": "vehicle",
+        "count": 1174789
+      },
+      {
+        "label": "road-flooded",
+        "count": 955847
+      },
+      {
+        "label": "building-flooded",
+        "count": 806743
+      }
+    ],
+    "recommendation": "Siaga infrastruktur. AI mendeteksi rasio tinggi pada label #vehicle, #road-flooded, #building-flooded. Insight: Rasio pixel `building-flooded` terhadap total bangunan sangat tinggi."
+  },
+  {
+    "region_id": "sec-16",
+    "name": "Kecamatan Ujung Pandang",
+    "fspi": 52.3,
+    "status": "TINGGI",
+    "indicators": {
+      "inundation": 0.4657,
+      "infra_damage": 0.5556,
+      "access_loss": 0.5663
+    },
+    "n_images": 27,
+    "top_labels": [
+      {
+        "label": "road-flooded",
+        "count": 2108789
+      },
+      {
+        "label": "vehicle",
+        "count": 621568
+      },
+      {
+        "label": "building-flooded",
+        "count": 511748
+      }
+    ],
+    "recommendation": "Siaga infrastruktur. AI mendeteksi rasio tinggi pada label #road-flooded, #vehicle, #building-flooded. Insight: Rasio pixel `building-flooded` terhadap total bangunan sangat tinggi."
+  }
+]

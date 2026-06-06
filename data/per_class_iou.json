@@ -1,0 +1,12 @@
+{
+  "background": 0.0,
+  "building-flooded": 0.6372,
+  "building-non-flooded": 0.8219,
+  "grass": 0.5386,
+  "pool": 0.8266,
+  "road-flooded": 0.6646,
+  "road-non-flooded": 0.8186,
+  "tree": 0.5941,
+  "vehicle": 0.6435,
+  "water": 0.8687
+}

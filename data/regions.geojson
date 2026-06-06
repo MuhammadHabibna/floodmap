@@ -1,0 +1,581 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "sec-01",
+        "name": "Kecamatan Sungai Liat",
+        "fspi": 49.4,
+        "status": "TINGGI"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.8,
+              -2.5
+            ],
+            [
+              104.88,
+              -2.5
+            ],
+            [
+              104.88,
+              -2.42
+            ],
+            [
+              104.8,
+              -2.42
+            ],
+            [
+              104.8,
+              -2.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "sec-02",
+        "name": "Kecamatan Muara Baru",
+        "fspi": 56.3,
+        "status": "TINGGI"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.88,
+              -2.5
+            ],
+            [
+              104.96,
+              -2.5
+            ],
+            [
+              104.96,
+              -2.42
+            ],
+            [
+              104.88,
+              -2.42
+            ],
+            [
+              104.88,
+              -2.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "sec-03",
+        "name": "Kecamatan Tanjung Harapan",
+        "fspi": 52.0,
+        "status": "TINGGI"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.96,
+              -2.5
+            ],
+            [
+              105.03999999999999,
+              -2.5
+            ],
+            [
+              105.03999999999999,
+              -2.42
+            ],
+            [
+              104.96,
+              -2.42
+            ],
+            [
+              104.96,
+              -2.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "sec-04",
+        "name": "Kecamatan Rawa Indah",
+        "fspi": 69.7,
+        "status": "KRITIS"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.03999999999999,
+              -2.5
+            ],
+            [
+              105.11999999999999,
+              -2.5
+            ],
+            [
+              105.11999999999999,
+              -2.42
+            ],
+            [
+              105.03999999999999,
+              -2.42
+            ],
+            [
+              105.03999999999999,
+              -2.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "sec-05",
+        "name": "Kecamatan Pantai Cermin",
+        "fspi": 59.5,
+        "status": "TINGGI"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.8,
+              -2.42
+            ],
+            [
+              104.88,
+              -2.42
+            ],
+            [
+              104.88,
+              -2.34
+            ],
+            [
+              104.8,
+              -2.34
+            ],
+            [
+              104.8,
+              -2.42
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "sec-06",
+        "name": "Kecamatan Bandar Setia",
+        "fspi": 60.1,
+        "status": "KRITIS"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.88,
+              -2.42
+            ],
+            [
+              104.96,
+              -2.42
+            ],
+            [
+              104.96,
+              -2.34
+            ],
+            [
+              104.88,
+              -2.34
+            ],
+            [
+              104.88,
+              -2.42
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "sec-07",
+        "name": "Kecamatan Air Tawar",
+        "fspi": 61.3,
+        "status": "KRITIS"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.96,
+              -2.42
+            ],
+            [
+              105.03999999999999,
+              -2.42
+            ],
+            [
+              105.03999999999999,
+              -2.34
+            ],
+            [
+              104.96,
+              -2.34
+            ],
+            [
+              104.96,
+              -2.42
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "sec-08",
+        "name": "Kecamatan Kampung Melayu",
+        "fspi": 63.0,
+        "status": "KRITIS"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.03999999999999,
+              -2.42
+            ],
+            [
+              105.11999999999999,
+              -2.42
+            ],
+            [
+              105.11999999999999,
+              -2.34
+            ],
+            [
+              105.03999999999999,
+              -2.34
+            ],
+            [
+              105.03999999999999,
+              -2.42
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "sec-09",
+        "name": "Kecamatan Pelabuhan Ratu",
+        "fspi": 52.7,
+        "status": "TINGGI"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.8,
+              -2.34
+            ],
+            [
+              104.88,
+              -2.34
+            ],
+            [
+              104.88,
+              -2.26
+            ],
+            [
+              104.8,
+              -2.26
+            ],
+            [
+              104.8,
+              -2.34
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "sec-10",
+        "name": "Kecamatan Teluk Dalam",
+        "fspi": 66.6,
+        "status": "KRITIS"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.88,
+              -2.34
+            ],
+            [
+              104.96,
+              -2.34
+            ],
+            [
+              104.96,
+              -2.26
+            ],
+            [
+              104.88,
+              -2.26
+            ],
+            [
+              104.88,
+              -2.34
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "sec-11",
+        "name": "Kecamatan Sumber Jaya",
+        "fspi": 61.1,
+        "status": "KRITIS"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.96,
+              -2.34
+            ],
+            [
+              105.03999999999999,
+              -2.34
+            ],
+            [
+              105.03999999999999,
+              -2.26
+            ],
+            [
+              104.96,
+              -2.26
+            ],
+            [
+              104.96,
+              -2.34
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "sec-12",
+        "name": "Kecamatan Padang Bulan",
+        "fspi": 75.1,
+        "status": "KRITIS"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.03999999999999,
+              -2.34
+            ],
+            [
+              105.11999999999999,
+              -2.34
+            ],
+            [
+              105.11999999999999,
+              -2.26
+            ],
+            [
+              105.03999999999999,
+              -2.26
+            ],
+            [
+              105.03999999999999,
+              -2.34
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "sec-13",
+        "name": "Kecamatan Tegal Sari",
+        "fspi": 56.0,
+        "status": "TINGGI"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.8,
+              -2.26
+            ],
+            [
+              104.88,
+              -2.26
+            ],
+            [
+              104.88,
+              -2.1799999999999997
+            ],
+            [
+              104.8,
+              -2.1799999999999997
+            ],
+            [
+              104.8,
+              -2.26
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "sec-14",
+        "name": "Kecamatan Cempaka Putih",
+        "fspi": 62.0,
+        "status": "KRITIS"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.88,
+              -2.26
+            ],
+            [
+              104.96,
+              -2.26
+            ],
+            [
+              104.96,
+              -2.1799999999999997
+            ],
+            [
+              104.88,
+              -2.1799999999999997
+            ],
+            [
+              104.88,
+              -2.26
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "sec-15",
+        "name": "Kecamatan Karang Anyar",
+        "fspi": 53.7,
+        "status": "TINGGI"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.96,
+              -2.26
+            ],
+            [
+              105.03999999999999,
+              -2.26
+            ],
+            [
+              105.03999999999999,
+              -2.1799999999999997
+            ],
+            [
+              104.96,
+              -2.1799999999999997
+            ],
+            [
+              104.96,
+              -2.26
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "sec-16",
+        "name": "Kecamatan Ujung Pandang",
+        "fspi": 52.3,
+        "status": "TINGGI"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.03999999999999,
+              -2.26
+            ],
+            [
+              105.11999999999999,
+              -2.26
+            ],
+            [
+              105.11999999999999,
+              -2.1799999999999997
+            ],
+            [
+              105.03999999999999,
+              -2.1799999999999997
+            ],
+            [
+              105.03999999999999,
+              -2.26
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
