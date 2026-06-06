@@ -272,7 +272,7 @@ function initSliders() {
   ['w1', 'w2', 'w3'].forEach(id => {
     const slider = document.getElementById(id);
     slider.addEventListener('input', () => {
-      document.getElementById(id + '-val').textContent = (slider.value / 100).toFixed(2);
+      document.getElementById(id + '-val').textContent = slider.value + '%';
       recalcFSPI();
     });
   });
