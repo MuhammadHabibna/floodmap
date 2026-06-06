@@ -757,6 +757,40 @@ footer {
 .disclaimer svg { color: var(--status-sedang); flex-shrink: 0; }
 .credits { font-size: 13px; font-weight: 500; color: var(--text-secondary); text-align: center; }
 
+/* ---- HUGGING FACE SPACEMBED ---- */
+.hf-container {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hf-desc p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.hf-iframe-wrapper {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.hf-iframe-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /* ---- RESPONSIVE ---- */
 @media (max-width: 1024px) {
   .prototype-grid {
