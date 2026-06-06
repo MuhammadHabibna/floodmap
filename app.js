@@ -551,6 +551,42 @@ async function initSampleDownload() {
   });
 }
 
+// --- Tab Routing ---
+function handleRouting() {
+  const hash = window.location.hash || '#insight';
+  const tabIds = ['#insight', '#prototype', '#live', '#performa'];
+  
+  // Update nav link active state
+  document.querySelectorAll('.header-nav a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === hash) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+  
+  // Show active section and hide others
+  tabIds.forEach(id => {
+    const el = document.querySelector(id);
+    if (el) {
+      if (id === hash) {
+        el.classList.remove('tab-hidden');
+        if (id === '#prototype' && map) {
+          setTimeout(() => { map.resize(); }, 150);
+        }
+      } else {
+        el.classList.add('tab-hidden');
+      }
+    }
+  });
+  
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: 'instant' });
+}
+
+window.addEventListener('hashchange', handleRouting);
+
 // --- Init ---
 async function init() {
   await loadData();
@@ -560,6 +596,7 @@ async function init() {
   renderFeed();
   renderCharts();
   await initSampleDownload();
+  handleRouting();
 }
 
 init();

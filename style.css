@@ -78,9 +78,18 @@ body {
 .header-nav { display: flex; align-items: center; gap: 24px; }
 .header-nav a {
   font-size: 14px; font-weight: 600; color: var(--text-secondary);
-  text-decoration: none; transition: color 0.15s;
+  text-decoration: none; transition: all 0.15s;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
 }
-.header-nav a:hover { color: var(--brand); }
+.header-nav a:hover, .header-nav a.active {
+  color: var(--brand);
+  border-bottom-color: var(--brand);
+}
+
+.tab-hidden {
+  display: none !important;
+}
 #theme-toggle {
   background: var(--bg-base); border: 1px solid var(--border);
   border-radius: 8px; padding: 8px; cursor: pointer;
