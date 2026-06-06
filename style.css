@@ -103,6 +103,152 @@ main { max-width: 1400px; margin: 0 auto; padding: 0 24px 48px; }
   font-size: 24px; letter-spacing: -0.5px;
 }
 
+/* ---- BUSINESS INSIGHT & FLOWCHART ---- */
+.insight-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: var(--shadow);
+}
+
+.insight-intro h3 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.insight-intro p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 900px;
+}
+
+.flowchart-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.flowchart-step {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  max-width: 280px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s, background-color 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flowchart-step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+  background: var(--bg-surface);
+}
+
+.flowchart-step.highlight {
+  border-color: var(--brand);
+  background: rgba(37, 99, 235, 0.02);
+}
+.flowchart-step.highlight:hover {
+  background: var(--bg-surface);
+}
+
+.flowchart-step.success {
+  border-color: var(--status-rendah);
+  background: rgba(16, 185, 129, 0.02);
+}
+.flowchart-step.success:hover {
+  background: var(--bg-surface);
+}
+
+.step-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  opacity: 0.5;
+  background: var(--border);
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.step-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--bg-surface);
+  color: var(--brand);
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.flowchart-step.highlight .step-icon {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--brand);
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.flowchart-step.success .step-icon {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--status-rendah);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.step-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.flowchart-step h4 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+}
+
+.flowchart-step p {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.flowchart-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--border);
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.flowchart-connector svg {
+  width: 24px;
+  height: 24px;
+}
+
 /* ---- KPI STRIP ---- */
 .kpi-grid {
   display: grid;
@@ -429,6 +575,18 @@ footer {
   }
   .prototype-feed {
     height: 500px;
+  }
+  .flowchart-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .flowchart-connector {
+    transform: rotate(90deg);
+    margin: 8px 0;
+  }
+  .flowchart-step {
+    max-width: 100%;
+    width: 100%;
   }
 }
 
